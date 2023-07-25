@@ -7,24 +7,48 @@ O projeto é um programa de console em C# que permite registrar, avaliar e exibi
 
 As opções disponíveis são as seguintes:
 
-Registrar uma banda: Permite que você insira o nome de uma banda e a adiciona à lista de bandas registradas.
+1. **Registrar uma banda:**
+   Permite que o usuário insira o nome de uma banda e a adicione à lista de bandas registradas. As bandas são armazenadas em um dicionário.
 
-Mostrar todas as bandas: Exibe uma lista de todas as bandas que foram registradas anteriormente.
+2. **Mostrar todas as bandas:**
+   Exibe uma lista de todas as bandas que foram registradas anteriormente.
 
-Avaliar uma banda: Permite que você dê uma nota para uma banda específica que foi registrada. A nota é armazenada em uma lista associada à banda.
+3. **Avaliar uma banda:**
+   Permite que o usuário dê uma nota para uma banda específica que foi registrada. As notas são armazenadas em uma lista associada à banda.
 
-Exibir a média das bandas: Calcula e mostra a média das notas atribuídas a uma banda específica.
+4. **Exibir a média das bandas:**
+   Calcula e mostra a média das notas atribuídas a uma banda específica.
 
-Sair: Encerra o programa.
+5. **Sair:**
+   Encerra o programa.
 
-Cada vez que você escolhe uma opção, o programa solicita as informações necessárias e executa a tarefa correspondente. Após concluir a tarefa, o programa oferece a opção de retornar ao menu principal ou sair do programa.
+## Estrutura do Código
 
-O código utiliza um dicionário chamado ListBandas para armazenar o nome de cada banda como chave e uma lista de inteiros para armazenar as notas dadas a cada banda.
+O código foi organizado utilizando métodos para separar as diferentes funcionalidades do programa:
 
-O programa utiliza o conceito de métodos para organizar as diferentes funcionalidades, como registrar, avaliar e exibir as bandas. Também inclui tratamento para caso o usuário digite uma opção inválida no menu, evitando que o programa quebre e dando a opção de tentar novamente.
+- `ShowOpcMenu()`: Exibe o menu principal com as opções disponíveis e permite que o usuário escolha uma opção.
 
-É importante lembrar que o projeto foi desenvolvido para fins educacionais e pode ser estendido ou aprimorado para adicionar mais funcionalidades e melhorar a experiência do usuário.
+- `RegBanda()`: Permite que o usuário registre uma nova banda, inserindo o nome da banda, que é adicionado ao dicionário de bandas.
 
+- `AllBanda()`: Mostra todas as bandas que foram registradas anteriormente.
+
+- `EvalBanda()`: Permite que o usuário avalie uma banda específica, atribuindo uma nota que é armazenada na lista associada à banda.
+
+- `AverBanda()`: Calcula e mostra a média das notas atribuídas a uma banda específica.
+
+- `BackMenu()`: Exibe uma mensagem e aguarda que o usuário pressione qualquer tecla para retornar ao menu principal.
+
+## Tratamento de Erros
+
+O programa inclui tratamento de erro para evitar que o programa quebre caso o usuário digite uma opção inválida no menu principal. Se o usuário inserir algo que não pode ser convertido para um número inteiro, o programa exibirá a mensagem "Opção inválida, tente novamente!" e oferecerá a opção de tentar novamente.
+
+## Observações
+
+Este projeto é uma implementação simples de um sistema de avaliação de bandas musicais e pode ser estendido ou aprimorado para adicionar mais funcionalidades, como armazenamento persistente dos dados, interface gráfica, entre outros.
+
+## Como Executar o Programa
+
+Para executar o programa, basta compilar o código-fonte em um ambiente C# compatível e executar o arquivo resultante. O programa será iniciado no console, e o usuário poderá interagir com as opções disponíveis digitando o número correspondente e pressionando Enter.
 ## Autores
 
 - [GitHub](https://github.com/Ramiriz-Leal?tab=repositories)
